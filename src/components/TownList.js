@@ -13,8 +13,7 @@ function TownList ({town})
             {
               town.map((town,index) =>
               <div>
-                <li key={`town${index+1}`} >
-                      <div className="clickItem"  
+                <li id={"town"+(index+1)} className="clickItem"  
                         onClick={() => {
                               if(getTownState === town.name)
                               {
@@ -26,10 +25,8 @@ function TownList ({town})
 
                             }
                           }>
-                           <h5>{town.name}</h5>
-                       </div>
-
-                      
+                      {town.name}
+                     
                 </li>
                
 

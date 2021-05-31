@@ -176,8 +176,7 @@ function App() {
             {
               states.map((state,index) =>
               <div>
-                <li key={`state${index+1}`} >
-                      <div className="clickItem"  
+                <li id={"state"+(index+1)}  className="clickItem"  
                         onClick={() => {
                               if(getState === state.name)
                               {
@@ -189,9 +188,9 @@ function App() {
 
                             }
                           }>
-                           <h5>{state.name}</h5>
-                       </div>
-
+                     
+                           {state.name}
+                       
                       
                 </li>
                 {getState === state.name && <CityList city = {state.cities}/>}
